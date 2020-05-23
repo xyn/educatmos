@@ -1,17 +1,17 @@
 - name: Copy wallpaper file
-    copy: 
-      src: files/wallpaper.jpg
-      dest: "/home/{{ default_user }}/.wallpaper.jpg"
-      owner: "{{ default_user }}"
-      group: "{{ default_user }}"
-      mode: '0600'
+  copy:
+    src: files/wallpaper.jpg
+    dest: "/home/{{ default_user }}/.wallpaper.jpg"
+    owner: "{{ default_user }}"
+    group: "{{ default_user }}"
+    mode: '0600'
 
 - name: Set wallpaper
-    xfconf:
-      channel: "xfce4-desktop"
-      property: "/backdrop/screen0/monitor0/image-path"
-      value: "/home/{{ default_user }}/.wallpaper.jpg"
-      value_type: "string"
-    become: True
-    become_user: "{{ default_user }}"
+  xfconf:
+    channel: "xfce4-desktop"
+    property: "/backdrop/screen0/monitor0/image-path"
+    value: "/home/{{ default_user }}/.wallpaper.jpg"
+    value_type: "string"
+  become: True
+  become_user: "{{ default_user }}"
 
