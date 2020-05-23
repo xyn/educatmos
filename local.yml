@@ -11,7 +11,7 @@
       register: get_user
 
     - set_fact:
-        default_user: "{{ get_user.stdout | from_json }}"
+        default_user: "{{ get_user.stdout | from_yaml }}"
 
     - debug:
         var: default_user
