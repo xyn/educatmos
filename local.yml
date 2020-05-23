@@ -11,7 +11,8 @@
       register: get_user
 
     - set_fact:
-        default_user: "{{ get_user.stdout_lines }}"
+        user_list: "{{ get_user.stdout_lines }}"
+        default_user: {{ user_list[0]}}
 
     - debug:
         var: default_user
