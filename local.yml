@@ -10,8 +10,6 @@
       become: false
       local_action: command whoami
       register: active_user
-  
-  - debug: var=active_user
 
   tasks:
     - include: tasks/users.yml
