@@ -6,12 +6,12 @@
       apt: update_cache=yes
       changed_when: False
 
-      # get root user info
-    - getent:
-        database: passwd
-        key: '1000'
+    - name: get default users
+      shell: ls -I ansible /home
+      register: default_user
+
     - debug:
-        var: "{{ getent_passwd | json_query('*') }}"
+        var: default_user
 
 
   tasks:
