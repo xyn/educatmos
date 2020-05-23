@@ -8,10 +8,13 @@
 
     - name: get default users
       shell: ls -I ansible /home
-      register: default_user
+      register: get_user
+
+    - set_fact:
+        default_user: get_user.stdout_lines
 
     - debug:
-        var: default_user.stdout_lines
+        var: default_user
 
 
   tasks:
