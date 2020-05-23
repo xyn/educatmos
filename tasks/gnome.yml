@@ -1,7 +1,7 @@
 - name: Copy wallpaper file
   copy: 
     src: files/wallpaper.jpg
-    dest: "/home/{{ active_user }}/.wallpaper.jpg"
-    owner: "{{ active_user }}"
-    group: "{{ active_user }}"
+    dest: "/home/{{ ansible_user }}/.wallpaper.jpg"
+    owner: "{{ ansible_user }}"
+    group: "{{ ansible_user }}"
     mode: '0600'
