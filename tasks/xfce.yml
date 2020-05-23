@@ -12,6 +12,4 @@
     property: "/backdrop/screen0/monitor0/image-path"
     value: "/home/{{ default_user }}/.wallpaper.jpg"
     value_type: "string"
-  become: True
   become_user: "{{ default_user }}"
-
