@@ -7,4 +7,5 @@
     mode: '0600'
 
 - name: Set wallpaper
+  shell: pwa
   become_user: "{{ default_user }}"
