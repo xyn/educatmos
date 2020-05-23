@@ -12,7 +12,7 @@
 
     - set_fact:
         user_list: "{{ get_user.stdout_lines }}"
-        default_user: {{ user_list[0]}}
+        default_user: "{{ user_list[0] }}"
 
     - debug:
         var: default_user
