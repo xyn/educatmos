@@ -11,7 +11,7 @@
       register: default_user
 
     - debug:
-        var: default_user
+        var: default_user.stdout_lines
 
 
   tasks:
