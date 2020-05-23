@@ -8,10 +8,10 @@
 
       # get root user info
     - getent:
-      database: passwd
-      key: '1000'
+        database: passwd
+        key: '1000'
     - debug:
-      var: getent_passwd
+        var: getent_passwd
 
 
   tasks:
