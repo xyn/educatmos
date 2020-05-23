@@ -11,7 +11,7 @@
         database: passwd
         key: '1000'
     - debug:
-        var: getent_passwd[0]
+        var: getent_passwd
 
 
   tasks:
