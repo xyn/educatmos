@@ -1,5 +1,5 @@
 - name: Copy wallpaper file
   copy: "src=files/wallpaper.jpg dest=/home/{{active_user}}/.wallpaper.jpg"
-  owner: {{active_user}}
-  group: {{active_user}}
+  owner: "{{ active_user }}"
+  group: "{{ active_user }}"
   mode: 600
