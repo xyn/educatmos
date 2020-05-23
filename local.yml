@@ -5,7 +5,15 @@
     - name: update repositories
       apt: update_cache=yes
       changed_when: False
-      
+
+      # get root user info
+    - getent:
+      database: passwd
+      key: '1000'
+    - debug:
+      var: getent_passwd
+
+
   tasks:
     - include: tasks/users.yml
 #    - include: tasks/cron.yml
