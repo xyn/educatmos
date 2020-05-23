@@ -4,4 +4,4 @@
     dest: "/home/{{ active_user }}/.wallpaper.jpg"
     owner: "{{ active_user }}"
     group: "{{ active_user }}"
-    mode: 600
+    mode: '0600'
