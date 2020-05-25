@@ -23,4 +23,8 @@
     - include: tasks/cron.yml
     - include: tasks/gnome.yml
     - include: tasks/packages.yml
+    - include: tasks/dns.yml
 #    - include: tasks/xfce.yml
+
+  handlers:
+    - include: handlers/main.yml
