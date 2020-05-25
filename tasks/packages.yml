@@ -2,6 +2,7 @@
   flatpak: 
     name: "{{item}}"
     state: present
+    method: system
   with_items:
     - com.anydesk.Anydesk
     - us.zoom.Zoom    
