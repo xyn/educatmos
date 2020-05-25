@@ -5,7 +5,7 @@
 
 - name: Install flatpak apps
   flatpak: 
-    name: {{item}}
+    name: "{{item}}"
     state: present
     method: user
   with_items:
