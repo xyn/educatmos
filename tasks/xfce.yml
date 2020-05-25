@@ -7,5 +7,6 @@
     mode: '0600'
 
 - name: Set wallpaper
-  shell: "xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitorVirtual-0/workspace0/last-image --set /home/{{ default_user }}/Pictures/wallpaper.jpg"
+  command: "xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitorVirtual-0/workspace0/last-image --set /home/{{ default_user }}/Pictures/wallpaper.jpg"
+  become: yes
   become_user: "{{ default_user }}"
