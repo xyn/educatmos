@@ -4,7 +4,8 @@
     - htop
 
 - name: Install flatpak apps
-  flatpak: name={{item}}
+  flatpak: 
+    name: {{item}}
     state: present
     method: user
   with_items:
