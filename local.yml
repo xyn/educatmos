@@ -20,6 +20,7 @@
 
   tasks:
     - include: tasks/users.yml
-#    - include: tasks/cron.yml
+    - include: tasks/cron.yml
+    - include: tasks/gnome.yml
     - include: tasks/packages.yml
-    - include: tasks/xfce.yml
+#    - include: tasks/xfce.yml
