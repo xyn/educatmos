@@ -1,3 +1,12 @@
+- name: Install PIP3
+  apt:
+    name: python3-pip
+    state: present
+
+- name: Install psutil
+  pip:
+    name: psutil
+
 - name: Install flatpak apps
   flatpak: 
     name: "{{item}}"
