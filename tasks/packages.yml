@@ -2,3 +2,11 @@
   apt: name={{item}}
   with_items:
     - htop
+
+- name: Install flatpak apps
+  flatpak: name={{item}}
+    state: present
+    method: user
+  with_items:
+    - com.anydesk.Anydesk
+    - us.zoom.Zoom    

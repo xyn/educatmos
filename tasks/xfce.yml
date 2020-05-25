@@ -1,11 +1,11 @@
 - name: Copy wallpaper file
   copy:
     src: files/wallpaper.jpg
-    dest: "/home/{{ default_user }}/.wallpaper.jpg"
+    dest: "/home/{{ default_user }}/Pictures/wallpaper.jpg"
     owner: "{{ default_user }}"
     group: "{{ default_user }}"
     mode: '0600'
 
 - name: Set wallpaper
-  shell: "xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitorVirtual-0/workspace0/last-image --set /home/{{ default_user }}/.wallpaper.jpg"
+  shell: "xfconf-query --channel xfce4-desktop --property /backdrop/screen0/monitorVirtual-0/workspace0/last-image --set /home/{{ default_user }}/Pictures/wallpaper.jpg"
   become_user: "{{ default_user }}"
