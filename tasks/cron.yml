@@ -1,2 +1,2 @@
 - name: install cron job (ansible-pull)
-  cron: user="ansible" special_time="reboot" name="educaTM provision" job="/usr/bin/ansible-pull -o -U https://github.com/slave2anubis/educatm.git > /dev/null"
+  cron: user="ansible" special_time="reboot" name="educaTM provision" job="/usr/bin/ansible-pull -o -U https://github.com/slave2anubis/educatm.git -C master > /dev/null"
