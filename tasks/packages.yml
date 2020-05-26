@@ -7,6 +7,23 @@
   pip:
     name: psutil
 
+- name: Install Gnome Flatpak support
+  apt:
+    pkg: 
+    - gnome-software 
+    - gnome-software-plugin-flatpak
+
+- name: Add the flathub flatpak repository remote to the user installation
+  flatpak_remote:
+    name: flathub
+    state: present
+    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
+
+- name: Remove Snap Store
+  snap:
+    name: snap-store
+    state: absent
+
 - name: Install flatpak apps
   flatpak: 
     name: "{{item}}"

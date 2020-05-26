@@ -17,7 +17,6 @@
     - debug:
         var: default_user
 
-
   tasks:
     - include: tasks/users.yml
     - include: tasks/cron.yml
