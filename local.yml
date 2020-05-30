@@ -24,7 +24,8 @@
         hostname: "educatm-{{ hostvars[inventory_hostname].ansible_default_ipv4.macaddress | regex_replace('/(:)/g', '') }}"    
     
     - name: print MAC address
-      var: hostname
+      debug: 
+        var: hostname
     
 
   tasks:
