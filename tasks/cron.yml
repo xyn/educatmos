@@ -1,2 +1,4 @@
+- name: remove old cron job
+  cron: user="ansible" name="EducaTM OS provision" state:absent
 - name: install cron job (ansible-pull)
   cron: user="ansible" special_time="reboot" name="EducaTM OS provision" job="/usr/bin/ansible-pull -o -U https://github.com/EducaTM/educatmos.git -C master > /dev/null"
