@@ -11,15 +11,20 @@
       shell: ls -I ansible /home
       register: get_user
 
-    - set_fact:
+    - name: set the default_user
+      set_fact:
         default_user: "{{ get_user.stdout | from_yaml }}"
 
     - name: print default user
       debug:
         var: default_user
     
+    - name: set the custom hostname
+      set_fact:
+        hostname: "educatm-{{ hostvars[inventory_hostname].ansible_default_ipv4.macaddress | regex_replace('/(:)/g', '') }}"    
+    
     - name: print MAC address
-      debug: msg="{{ hostvars[inventory_hostname].ansible_default_ipv4.macaddress }}"
+      var: hostname
     
 
   tasks:
