@@ -21,7 +21,7 @@
     
     - name: set the custom hostname
       set_fact:
-        hostname: "educatm-{{ hostvars[inventory_hostname].ansible_default_ipv4.macaddress | regex_replace('/(:)/g', '') }}"    
+        hostname: "educatm-{{ hostvars[inventory_hostname].ansible_default_ipv4.macaddress | regex_replace(':') }}"    
     
     - name: print MAC address
       debug: 
