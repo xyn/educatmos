@@ -29,11 +29,6 @@
     name: snap-store
     state: absent
 
-- name: remove com.anydesk.Anydesk
-  flatpak:
-    name: com.anydesk.Anydesk
-    state: absent
-
 - name: Install flatpak apps
   flatpak: 
     name: "{{item}}"
