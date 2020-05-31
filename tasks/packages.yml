@@ -12,6 +12,10 @@
     pkg: 
     - gnome-software 
     - gnome-software-plugin-flatpak
+
+- name: install statistics gathering software
+  apt:
+    pkg:
     - acct
 
 - name: Add the flathub flatpak repository remote to the user installation
@@ -23,6 +27,11 @@
 - name: Remove Snap Store
   snap:
     name: snap-store
+    state: absent
+
+- name: remove com.anydesk.Anydesk
+  flatpak:
+    name: com.anydesk.Anydesk
     state: absent
 
 - name: Install flatpak apps
