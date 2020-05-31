@@ -12,5 +12,5 @@ To initialize this repository please follow the steps:
 2. Download the setup.sh file ```https://raw.githubusercontent.com/EducaTM/educatmos/master/setup.sh```;
 3. Give it execution rights ```chmod +x ./setup.sh```;
 4. Execute it using sudo ```sudo ./setup.sh```;
-5. If the setup was successfull, delete the setup.sh file.
+5. If the setup was successful, delete the setup.sh file.
 
