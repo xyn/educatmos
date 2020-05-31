@@ -9,4 +9,5 @@
   loop: 
     - /home/{{ default_user }}/.anydesk/service.conf
     - /home/{{ default_user }}/.anydesk/system.conf
-  when: has_anydesk_unique_id != ''
+  when: has_anydesk_unique_id != ""
+
