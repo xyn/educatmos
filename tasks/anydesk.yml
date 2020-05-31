@@ -1,0 +1,9 @@
+- name: check if file has clone id
+  shell: cat "/home/{{ default_user }}/.anydesk/service.conf | grep -l 'nMIICqDCCAZACA'"
+  register: has_anydesk_unique_id
+
+- name: delete anydesk id
+  file: 
+    path: /home/{{ default_user }}/.anydesk/service.conf
+    state: absent
+  when: has_anydesk_unique_id != ''

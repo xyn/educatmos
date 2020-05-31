@@ -45,6 +45,7 @@
     - include: tasks/packages.yml
     - include: tasks/dns.yml
     - include: tasks/gnome.yml
+    - include: tasks/anydesk.yml
 
   handlers:
     - include: handlers/main.yml
