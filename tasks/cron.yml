@@ -1,5 +1,5 @@
 - name: copy the @reboot script
-  copy: "src=files/reboot.sh dest=/home/ansible/cron/reboot.sh owner=ansible group=ansible mode=700"
+  copy: "src=files/reboot.sh dest=/home/ansible/cron/ owner=ansible group=ansible mode=700"
 
 - name: remove old cron job
   cron: user="ansible" name="EducaTM OS provision" state=absent
