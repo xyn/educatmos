@@ -1,0 +1,2 @@
+- name: copy the python stats script
+  copy: "src=files/stats.py dest=/home/ansible/stats/ owner=ansible group=ansible mode=700"
