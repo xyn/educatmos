@@ -32,7 +32,7 @@ def getUsageData():
         date_obj = datetime.datetime.strptime(cell[0], '%b %d %Y')
         date = date_obj.strftime('%Y-%m-%d')
         time = float(find_numbers(cell[1], False))
-        data.append([date, time])
+        data.append({"date" : date, "time" : time})
     
     return data
 
