@@ -41,6 +41,6 @@ payload["hostname"] = socket.gethostname()
 payload["usage"] = getUsageData()
 
 
-x = requests.post("https://api.educatm.ro", json = payload)
+x = requests.post("https://api.educatm.ro/api/reports", json = payload)
 
 print(x.text)
