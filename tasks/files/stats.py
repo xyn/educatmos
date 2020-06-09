@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import subprocess, re, requests, socket
+import subprocess, re, requests, socket, datetime
 
 # define global variable
 payload = {}
@@ -29,7 +29,8 @@ def getUsageData():
     # iterate over the data
     for row in acData:
         cell = row.split("\t")
-        date = cell[0]
+        date_obj = datetime.datetime.strptime(cell[0], '%m %d %Y')
+        date = date_obj.strftime('%Y-%m-%d')
         time = float(find_numbers(cell[1], False))
         data.append([date, time])
     
