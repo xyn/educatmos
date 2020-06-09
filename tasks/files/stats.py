@@ -29,7 +29,7 @@ def getUsageData():
     # iterate over the data
     for row in acData:
         cell = row.split("\t")
-        date_obj = datetime.datetime.strptime(cell[0], '%m %d %Y')
+        date_obj = datetime.datetime.strptime(cell[0], '%b %d %Y')
         date = date_obj.strftime('%Y-%m-%d')
         time = float(find_numbers(cell[1], False))
         data.append([date, time])
