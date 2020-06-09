@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import subprocess, re, requests
+import subprocess, re, requests, socket
 
 # define global variable
 payload = {}
@@ -37,9 +37,10 @@ def getUsageData():
 
 
 
+payload["hostname"] = socket.gethostname()
 payload["usage"] = getUsageData()
 
 
-x = requests.post("https://educatm.free.beeceptor.com", json = payload)
+x = requests.post("https://api.educatm.ro", json = payload)
 
 print(x.text)
