@@ -27,7 +27,7 @@
       debug: 
         var: hostname
 
-    - name: change hostname to myserver
+    - name: change hostname 
       hostname:
         name: "{{ hostname }}"
     
