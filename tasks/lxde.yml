@@ -9,6 +9,7 @@
     src: "{{ item }}"
     dest: /home/{{ default_user }}/Desktop/
     owner: "{{ default_user }}"
-    mode: 600
+    group: "{{ default_user }}"
+    mode: 777
   with_fileglob: 
     - files/libreoffice-*     
