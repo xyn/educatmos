@@ -24,10 +24,6 @@
     state: present
     flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
 
-- name: Remove Snap Store
-  snap:
-    name: snap-store
-    state: absent
 
 - name: Install flatpak apps
   flatpak: 
