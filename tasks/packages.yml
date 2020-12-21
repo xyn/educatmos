@@ -15,7 +15,7 @@
 - name: Download anydesk deb 
   get_url: 
     url="https://download.anydesk.com/rpi/anydesk_6.0.1-1_armhf.deb"
-    dest="/home/{{ ansible_env.USER }}/{{ my_package_name }}.deb"
+    dest="/home/{{ ansible_env.USER }}//anydesk_6.0.1-1_armhf.deb"
 
 - name: Install anydesk
   apt: deb="/home/{{ ansible_env.USER }}/anydesk_6.0.1-1_armhf.deb"
