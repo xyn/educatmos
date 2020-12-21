@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Link
+Name=LibreOffice Calc
+Icon=libreoffice-calc
+URL=/usr/share/applications/libreoffice-calc.desktop
+Name[en_US]=Excel
