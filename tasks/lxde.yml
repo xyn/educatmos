@@ -5,11 +5,8 @@
   command: "killall -9 pcmanfm"
 
 - name: Copy shortcuts
-  copy: 
-    src: "{{ item }}"
-    dest: "/home/{{ default_uesr }}/Desktop/"
-    owner: "{{ default_user }}"
-    mode: 600
-  with_fileglob: 
-    - files/libreoffice*
-    
+  copy: "src=files/libreoffice-calc.desktop dest=/home/{{ default_user }}/Desktop/ owner={{ default_user }} group={{ default_user }} mode=600"
+  copy: "src=files/libreoffice-impress.desktop dest=/home/{{ default_user }}/Desktop/ owner={{ default_user }} group={{ default_user }} mode=600"
+  copy: "src=files/libreoffice-writer.desktop dest=/home/{{ default_user }}/Desktop/ owner={{ default_user }} group={{ default_user }} mode=600"
+
+     
