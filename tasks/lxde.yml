@@ -1,5 +1,5 @@
 - name: Copy wallpaper file
-  copy: "src=files/wallpaper.png dest=/usr/share/rpd-wallpaper/temple.jpg" owner={{ default_user }} group={{ default_user }} mode=600"
+  copy: "src=files/wallpaper.png dest=/usr/share/rpd-wallpaper/temple.jpg owner={{ default_user }} group={{ default_user }} mode=600"
 
 - name: restart pcmanfm
   command: "killall -9 pcmanfm"
