@@ -5,7 +5,8 @@
 
 - name: Install libreoffice
   apt:
-    name: libreoffce
+    pkg:
+    - libreoffice
 
 - name: Install psutil
   pip:
