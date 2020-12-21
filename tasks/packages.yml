@@ -18,12 +18,6 @@
     pkg:
     - acct
 
-- name: Add the flathub flatpak repository remote to the user installation
-  flatpak_remote:
-    name: flathub
-    state: present
-    flatpakrepo_url: https://dl.flathub.org/repo/flathub.flatpakrepo
-
 
 - name: Install flatpak apps
   flatpak: 
