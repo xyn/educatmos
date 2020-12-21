@@ -44,7 +44,6 @@
     - include: tasks/cron.yml
     - include: tasks/packages.yml
     - include: tasks/dns.yml
-    - include: tasks/gnome.yml
     - include: tasks/anydesk.yml
     - include: tasks/stats.yml
 
