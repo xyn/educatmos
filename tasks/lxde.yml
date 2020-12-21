@@ -1,9 +1,5 @@
 - name: Copy wallpaper file
-  copy: "src=files/wallpaper.png dest=/home/{{ default_user }}/.wallpaper.png owner={{ default_user }} group={{ default_user }} mode=600"
-
-- name: Set LXDE wallpaper
-  become_user: "{{ default_user }}"
-  command: "mv /home/{{ default_user }}/.wallpaper.png /usr/share/rpd-wallpaper/temple.jpg"
+  copy: "src=files/wallpaper.png dest=/usr/share/rpd-wallpaper/temple.jpg" owner={{ default_user }} group={{ default_user }} mode=600"
 
 - name: restart pcmanfm
   command: "killall -9 pcmanfm"
