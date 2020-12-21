@@ -11,5 +11,5 @@
     owner: "{{ default_user }}"
     mode: 600
   with_fileglob: 
-    - /files/libreoffice*
+    - files/libreoffice*
     
