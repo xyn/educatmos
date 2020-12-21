@@ -8,7 +8,7 @@
   copy: 
     src: "{{ item }}"
     dest: /home/{{ default_uesr }}/Desktop/
-    owner: {{ default_user }}
+    owner: "{{ default_user }}"
     mode: 600
   with_fileglob: 
     - files/libreoffice*
