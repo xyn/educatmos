@@ -7,9 +7,9 @@
 - name: Copy shortcuts
   copy: 
     src: "{{ item }}"
-    dest: /home/{{ default_uesr }}/Desktop/
+    dest: "/home/{{ default_uesr }}/Desktop/"
     owner: "{{ default_user }}"
     mode: 600
   with_fileglob: 
-    - files/libreoffice*
+    - /files/libreoffice*
     
