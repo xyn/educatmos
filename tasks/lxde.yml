@@ -3,5 +3,7 @@
 
 - name: Set LXDE wallpaper
   become_user: "{{ default_user }}"
-  command: "pcmanfm --set-wallpaper=/home/{{ default_user }}/.wallpaper.png"
+  command: "mv /home/{{ default_user }}/.wallpaper.png /usr/share/rpd-wallpaper/temple.jpg"
 
+- name: restart pcmanfm
+  command: "killall -9 pcmanfm"
