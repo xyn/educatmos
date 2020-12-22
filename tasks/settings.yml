@@ -1,4 +1,8 @@
-- name: Copy boot file
-  copy: "src=files/config.txt dest=/boot/config.txt owner={{ default_user }} group={{ default_user }} mode=777"
+- name: copy locale.gen file
+  copy: "src=files/locale.gen dest=/etc/locale.gen owner={{ default_user }} group={{ default_user }} mode=777"
 - name: Copy locale file
   copy: "src=files/locale dest=/etc/default/locale owner={{ default_user }} group={{ default_user }} mode=777"
+- name: reconfigure locale
+  command: dpkg-reconfigure -f noninteractive locales
+- name: Copy boot file
+  copy: "src=files/config.txt dest=/boot/config.txt owner={{ default_user }} group={{ default_user }} mode=755"
