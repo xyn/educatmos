@@ -46,6 +46,6 @@
     - include: tasks/dns.yml
     - include: tasks/lxde.yml
     - include: tasks/stats.yml
-
+    - include: tasks/settings.yml
   handlers:
     - include: handlers/main.yml
