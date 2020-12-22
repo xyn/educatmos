@@ -5,4 +5,4 @@
 - name: reconfigure locale
   command: dpkg-reconfigure -f noninteractive locales
 - name: Copy boot file
-  copy: "src=files/config.txt dest=/boot/config.txt owner={{ default_user }} group={{ default_user }} mode=755"
+  copy: "src=files/config.txt dest=/boot/config.txt"
