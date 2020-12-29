@@ -1,7 +1,5 @@
 - name: Update all packages to their latest version
-  apt:
-    name: "*"
-    state: latest
+  apt: upgrade=dist force_apt_get=yes
 
 - name: Install PIP3
   apt:
