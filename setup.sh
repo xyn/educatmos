@@ -7,4 +7,4 @@ sudo ansible-pull -U https://github.com/xyn/educatmos.git -C development
 
 sudo rm /etc/xdg/autostart/piwiz.desktop
 
-sudo reboot now
+sudo ./install_zoom.sh
