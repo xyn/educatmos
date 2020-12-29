@@ -10,12 +10,12 @@ function error {
 rm -rvf ${HOME}/box86
 rm -rvf ${HOME}/zoom
 
-mkdir ${HOME}/box86
 mkdir ${HOME}/zoom
 
 sudo apt install libxcb-xtest0 libxcb-xfixes0 cmake pulseaudio-utils pulseaudio -y
 
 echo "Cloning box86..."
+cd ${HOME}
 git clone https://github.com/ptitSeb/box86 || error 'Failed to clone repository!'
 cd ${HOME}/box86 || error 'Failed to enter repository!'
 mkdir build || error 'Failed to make build directory!'
