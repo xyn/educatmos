@@ -25,3 +25,11 @@
 
 - name: Install anydesk
   apt: deb="/root/anydesk_6.0.1-1_armhf.deb"
+
+- name: Copy ZOOM script
+  copy:
+    src: files/install_zoom.sh
+    dest: /root/
+
+- name: run zoom install script
+  script: /root/install_zoom.sh
