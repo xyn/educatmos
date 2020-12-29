@@ -1,3 +1,8 @@
+- name: Update all packages to their latest version
+  apt:
+    name: "*"
+    state: latest
+
 - name: Install PIP3
   apt:
     name: python3-pip
@@ -12,11 +17,13 @@
 - name: Install psutil
   pip:
     name: psutil
+
 - name: fix themeing
   apt:
     pkg:
      - raspberrypi-ui-mods
      - libgdk-pixbuf2.0-dev
+
 - name: install statistics gathering software
   apt:
     pkg:
