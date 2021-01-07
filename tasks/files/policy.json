@@ -1,0 +1,6 @@
+{
+    "DefaultSearchProviderEnabled": true,
+    "DefaultSearchProviderName": "Google",
+    "DefaultSearchProviderSearchURL":"https://google.com/search?q={searchTerms}"
+}
+

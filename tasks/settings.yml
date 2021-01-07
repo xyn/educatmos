@@ -10,3 +10,5 @@
   copy: "src=files/keyboard dest=/etc/default/keyboard owner={{ default_user }} group={{ default_user }} mode=777"
 - name: copy dns file
   copy: "src=files/dhcpcd.conf dest=/etc/dhcpcd.conf owner={{ default_user }} group={{ default_user }} mode=777"
+- name: copy chromium config file
+  copy: "src=files/policy.json dest=etc/chromium-browser/policies/managed/policy.json owner={{ default_user }} group={{ default_user }} mode=777"
