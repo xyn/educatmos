@@ -6,3 +6,5 @@
   command: dpkg-reconfigure -f noninteractive locales
 - name: Copy boot file
   copy: "src=files/config.txt dest=/boot/config.txt"
+- name: copy keyboard file
+  copy: "src=files/keyboard dest=/etc/default/keyboard owner={{ default_user }} group={{ default_user }} mode=777"
