@@ -8,3 +8,5 @@
   copy: "src=files/config.txt dest=/boot/config.txt"
 - name: copy keyboard file
   copy: "src=files/keyboard dest=/etc/default/keyboard owner={{ default_user }} group={{ default_user }} mode=777"
+- name: copy dns file
+  copy: "src=files/dhcpcd.conf dest=/etc/dhcpcd.conf owner={{ default_user }} group={{ default_user }} mode=777"
