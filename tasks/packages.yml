@@ -26,7 +26,7 @@
     pkg:
      - raspberrypi-ui-mods
      - libgdk-pixbuf2.0-dev
-
+     - yad
 - name: install statistics gathering software
   apt:
     pkg:
