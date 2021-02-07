@@ -32,6 +32,12 @@
   apt:
     pkg:
     - acct
+    
+- name: install games
+  apt:
+    pkg:
+    - minecraft-pi
+    
 
 - name: Download anydesk deb 
   get_url: 
