@@ -1,4 +1,4 @@
-- name: reload NetworkManager
-  service:
-    name: NetworkManager
-    state: reloaded
+handlers:
+  - name: update timezone
+    command: dpkg-reconfigure --frontend noninteractive tzdata
+

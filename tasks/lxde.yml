@@ -8,9 +8,6 @@
               backup=yes
   notify:
     - update timezone
-  handlers:
-    - name: update timezone
-      command: dpkg-reconfigure --frontend noninteractive tzdata
 
 
 - name: Copy shortcuts
