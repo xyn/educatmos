@@ -1,14 +1,5 @@
 - name: Copy wallpaper file
   copy: "src=files/wallpaper.png dest=/usr/share/rpd-wallpaper/temple.jpg owner={{ default_user }} group={{ default_user }} mode=600"
-  copy: content='America/Los_Angeles'
-              dest=/etc/timezone
-              owner=root
-              group=root
-              mode=0644
-              backup=yes
-  notify:
-    - update timezone
-
 
 - name: Copy shortcuts
   copy: 
