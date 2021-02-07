@@ -11,18 +11,8 @@
   with_fileglob: 
     - files/libreoffice-*     
 
-- name: Set Time Zone
-  gather_facts: False
-  tasks:
-    - name: Set timezone variables
-      copy: content='Europe/Bucharest'
-            dest=/etc/timezone
-            owner=root
-            group=root
-            mode=0644
-            backup=yes
-      notify:
-        - update timezone
-  handlers:
-    - name: update timezone
-      command: dpkg-reconfigure --frontend noninteractive tzdata
+- name: Set timezone to Asia/Tokyo
+  community.general.timezone:
+    name: Europe/Bucharest
+
+
