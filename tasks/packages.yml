@@ -27,6 +27,7 @@
      - raspberrypi-ui-mods
      - libgdk-pixbuf2.0-dev
      - yad
+     - pavucontrol
 - name: install statistics gathering software
   apt:
     pkg:
