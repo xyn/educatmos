@@ -1,6 +1,10 @@
 - name: Copy wallpaper file
   copy: "src=files/wallpaper.png dest=/usr/share/rpd-wallpaper/temple.jpg owner={{ default_user }} group={{ default_user }} mode=600"
 
+- name: Set timezone to Europe/Bucharest
+  community.general.timezone:
+    name: Europe/Bucharest
+
 - name: Copy shortcuts
   copy: 
     src: "{{ item }}"
@@ -10,9 +14,5 @@
     mode: 777
   with_fileglob: 
     - files/libreoffice-*     
-
-- name: Set timezone to Asia/Tokyo
-  community.general.timezone:
-    name: Europe/Bucharest
 
 
