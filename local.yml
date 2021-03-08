@@ -1,7 +1,5 @@
----
-
-  tasks:
-    - include: tasks/cron.yml
-    - include: tasks/stats.yml
-    - include: tasks/update.yml
+tasks:
+  - include: tasks/cron.yml
+  - include: tasks/stats.yml
+  - include: tasks/update.yml
 
