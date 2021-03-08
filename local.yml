@@ -1,5 +1,7 @@
-tasks:
-  - include: tasks/cron.yml
-  - include: tasks/stats.yml
-  - include: tasks/update.yml
+---
+- hosts: localhost
+  tasks:
+    - include: tasks/cron.yml
+    - include: tasks/stats.yml
+    - include: tasks/update.yml
 
