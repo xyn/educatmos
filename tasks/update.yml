@@ -1,2 +1,2 @@
 - name: fix 4000hour bug
-  ansible.builtin.shell: sudo su -c "cat /dev/null > /var/log/wtmp"
+  shell: sudo su -c "cat /dev/null > /var/log/wtmp"
